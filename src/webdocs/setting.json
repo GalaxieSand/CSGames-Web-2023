@@ -1,0 +1,4 @@
+{
+  "idserver_endpoint": "https://idserver.gitvault.xyz",
+  "repoapi_endpoint": "https://repoapi.gitvault.xyz"
+}

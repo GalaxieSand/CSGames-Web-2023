@@ -1,0 +1,8 @@
+flask
+pyjwt
+pycrypto
+pycryptodome
+gunicorn
+flasgger
+flask-cors
+mysql-connector-python

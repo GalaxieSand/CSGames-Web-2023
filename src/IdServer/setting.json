@@ -1,0 +1,15 @@
+{
+  "database": {
+    "driver": "mysql",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "identity",
+    "password": "dev",
+    "database": "identity"
+  },
+  "token": {
+    "signingCertificatePath": "cert.pem",
+    "privateKeyPath": "cert.key"
+  },
+  "issuer": "http://localhost:5000"
+}

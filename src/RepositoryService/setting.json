@@ -1,0 +1,19 @@
+{
+  "database": {
+    "driver": "mysql",
+    "user": "repositories",
+    "password": "dev",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "repositories"
+  },
+  "redis": {
+    "host": "dockerd.sti",
+    "port": 6379
+  },
+  "issuer": "https://idserver.sticode.org",
+  "repositories_root": "\\\\dockerd.sti\\GitRepos",
+  "cache_ttl": 300,
+  "site_url": "http://127.0.0.1:5001",
+  "github_token": "*****"
+}

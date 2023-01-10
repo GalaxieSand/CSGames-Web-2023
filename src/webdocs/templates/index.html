@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Web Competition</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="javascript:loadWithLocale();">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse">
+      <a class="navbar-brand" href="#">Web competition</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ idserver_endpoint }}/swagger">Id Server</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ repoapi_endpoint }}/swagger">Repository API</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/snippetsspec.html">Snippets Service Spec</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row col-md-12">
+      <button type="button" class="btn btn-primary" onclick="javascript:showMarkdown('fr');">Français</button>
+      <button type="button" class="btn btn-primary" onclick="javascript:showMarkdown('en');">English</button>
+    </div>
+    <div class="col-md-12" id="content">
+
+    </div>
+    <div class="col-md-10" id="snippets-swagger"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/webdocs.js') }}"></script>
+</body>
+</html>

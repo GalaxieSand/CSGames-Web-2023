@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name idserver.sticode.org;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/idserver/gunicorn.sock;
+    }
+}

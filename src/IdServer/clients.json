@@ -1,0 +1,66 @@
+{
+  "clients": [
+    {
+      "client_id": "admin",
+      "client_secret": "dev",
+      "allowed_grant_types": [
+        "client_credentials"
+      ],
+      "allowed_scopes": [
+        "repoapi",
+        "admin",
+        "idserver",
+        "snippetsapi"
+      ],
+      "access_token_lifetime": 3600,
+      "api_resources": [
+        "repoapi",
+        "idserver",
+        "snippetsapi"
+      ],
+      "claims": {
+        "role": "Admin"
+      }
+    },
+    {
+      "client_id": "gitimport",
+      "client_secret": "dev",
+      "allowed_grant_types": [
+        "client_credentials"
+      ],
+      "allowed_scopes": [
+        "repoapi",
+        "idserver",
+        "snippetsapi"
+      ],
+      "access_token_lifetime": 3600,
+      "api_resources": [
+        "repoapi",
+        "idserver",
+        "snippetsapi"
+      ],
+      "claims": {
+        "role": "Importer"
+      }
+    },
+    {
+      "client_id": "tenant1",
+      "client_secret": "dev",
+      "allowed_grant_types": [
+        "client_credentials",
+        "password"
+      ],
+      "allowed_scopes": [
+        "repoapi",
+        "idserver",
+        "snippetsapi"
+      ],
+      "access_token_lifetime": 3600,
+      "api_resources": [
+        "repoapi",
+        "idserver",
+        "snippetsapi"
+      ],
+      "claims": {}
+    }]
+}

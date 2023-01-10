@@ -1,0 +1,220 @@
+components:
+  schemas:
+    Snippet:
+      type: object
+      description: "Snippet model"
+      properties:
+        id:
+          type: integer
+          description: "Snippet Id"
+        title: 
+          type: string
+          description: "Snippet Title"
+        content:
+          type: string
+          description: "Snippet Content"
+        keywords:
+          type: array
+          description: "An array of keywords related to this snippet"
+          items:
+            type: string
+        created:
+          type: integer
+          description: "Creation timestamp of the snippet"
+    SnippetResult:
+      type: object
+      description: "Snippet results returned from a search"
+      properties:
+        id: 
+          type: integer
+          description: "Snippet Id"
+        title: 
+          type: string
+          description: "Snippet Title"
+        keywords:
+          type: array
+          description: "An array of keywords related to this snippet"
+          items:
+            type: string
+        created:
+          type: integer
+          description: "Creation timestamp of the snippet"
+  securitySchemes:
+    Bearer:
+      bearerFormat: JWT
+      scheme: bearer
+      type: http
+info:
+  description: 'Manage the creation and consumption of snippets. All endpoints must be protected via a Json Web Token.'
+  title: Snippets Service
+  version: "1"
+openapi: 3.0.0
+paths:
+  '/snippets/create':
+    post:
+      operationId: 'snippets_create'
+      requestBody:
+        description: "Snippet object to create. Only user can create a snippet (role = User), Subject from the JWT must be persisted with the snippet, because only the owner or an admin can delete it. Also associate all specified keywords to this snippet, if a new keyword is specified, it must be added as a available keyword."
+        content: 
+          application/json:
+            schema:
+              properties:
+                title:
+                  type: string
+                  description: "Snippet title"
+                content:
+                  type: string
+                  description: "Snippet content"
+                keywords:
+                  type: array
+                  description: "An array of keywords for this snippet"
+                  items:
+                    type: string
+              required:
+              - title
+              - content
+                
+      tags: 
+      - Snippets
+      responses:
+        '201':
+          description: 'Snippet was created successfully'
+          content:
+            'application/json':
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    description: 'Id of the snippet created'
+        '400':
+          description: "Bad request"
+        '401':
+          description: "Unauthorized"
+        '403':
+          description: "Forbidden"
+          
+  '/snippets':
+    get:
+      operationId: "snippets_get"
+      description: "Browse through existing snippet. Results are ordered by created timestamp descending."
+      parameters: 
+      - name:
+          title
+        schema:
+          type: string
+        description: "Title filter applied on the search query"
+        in: query
+      - name: keywords
+        schema:
+          type: string
+        description: "Keywords matching for the search. Multiple keywords can be specified, separated by ';'"
+        in: query
+      - name: 
+          limit
+        schema:
+          type: integer
+          default: 25
+          maximum: 1000
+        in: query
+        description: "Maximum of results to returns. Default is 25"
+      - name: 
+          skip
+        schema:
+          type: integer
+          default: 0
+        in: query
+        description: "Number of result to skip. Default is 0"
+      - name:
+          mine
+        schema:
+          type: boolean
+          default: false
+        description: "Only returns snippet that the user owns (With matching subject from JWT). If the value is True, the JWT must be a User JWT, else it should returns a Bad Request."
+        in: query
+        
+      tags:
+      - Snippets
+      responses:
+        '200':
+          description: "Result of snippets matching criteria"
+          content:
+            'application/json':
+              schema:
+                properties:
+                  snippets:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SnippetResult'
+                  totalMatches:
+                    type: integer
+                    description: "Total results matching specified criteria"
+        '400':
+          description: "Invalid Request."
+  '/snippets/{snippet_id}':
+    get:
+      tags:
+      - Snippets
+      operationId: "get_snippet"
+      description: "Get a specific snippet from id"
+      parameters:
+      - name:
+          snippet_id
+        in: path
+        description: "Snippet Id"
+        schema:
+          type: integer
+        required: true
+      responses:
+        '200':
+          description: "Specified Snippet is returned"
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/Snippet'
+        '404':
+          description: "Snippet not found"
+        '401':
+          description: "Unauthorized"
+        '403':
+          description: "Forbidden"
+    delete:
+      tags:
+      - Snippets
+      operationId: "delete_snippet"
+      description: "Delete a specific snippet. The JWT must matched owner Subject of the Snippet or a JWT with a role."
+      parameters:
+      - name:
+          snippet_id
+        in: path
+        description: "Snippet Id"
+        schema:
+          type: integer
+        required: true
+      responses:
+        '204':
+          description: "Specified Snippet is deleted"
+        '400':
+          description: "Bad request"
+        '401':
+          description: "Unauthorized"
+  '/keywords':
+    get:
+      tags:
+      - Keywords
+      operationId: "Get all keywords available"
+      description: "Returns all keywords available for a snippet"
+      responses:
+        '200':
+          description: "Returns an array of keyword"
+          content:
+            'application/json':
+              schema:
+                type: array
+                items:
+                  type: string
+        '401':
+          description: "Unauthorized"
+        '403':
+          description: "Forbidden"
+security:
+  - Bearer: []

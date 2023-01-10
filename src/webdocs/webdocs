@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name webdocs.cs;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/webdocs/gunicorn.sock;
+    }
+}
