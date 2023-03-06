@@ -167,10 +167,10 @@ Vous devez implémenté un front-end ainsi qu'un service back-end. Vous pouvez c
     - Respecter le format de retour. [20 pts]
     - Supporter le paramètre title, pour filtrer par titre si la chaîne est contenue dans le titre. [20 pts]
     - Supporter le paramètre keywords, pour filtrer selon les mots clés associés. [20 pts]
-        - Supporter plusieurs mots clés, séparé par ';'. [20 pts]
+        - Supporter plusieurs mots clés, séparé par ';'. [30 pts]
     - Implémenter la pagination avec les paramètres skip et limit. [20 pts]
     - Implémenter le paramètre mine, qui liste seulement les snippets de l'utilisateur courant, selon le **subject** qui est présent dans le JWT. [20 pts]
-    - Ordonner les snippets par ordre décroissant sur le champ `created`. [10 pt]
+    - Ordonner les snippets par ordre décroissant sur le champ `created`. [20 pt]
 
   * Récupérer un snippet par identifiant, GET /snippets/<snippet_id>
     - Retourner une 401 si aucun JWT est présent dans la requête. [10 pt]
