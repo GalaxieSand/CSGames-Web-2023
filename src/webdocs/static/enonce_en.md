@@ -7,6 +7,7 @@ With the rich fleeing the planet in haste and our rush to move to underwater cit
 ## State of the project
 
 Work behind this website has already begun by a team in Mexico, but with severe weather in their area they don't have the time to complete it.
+
 They had started a micro-service architecture, with a `JSON Web Token` to transit user identity between services in the ecosystem. 
 This token must be added in each request to the back-end, the `Authorization` http header. The value of the header is `Bearer $JSONWebToken`.
 
