@@ -6,5 +6,5 @@ Crée par : `Jordan Guérin`
 
 Modifié par : `Jean-Philippe Larouche`
 
-- [Énoncé FR](src/webdocs/static/enonce.md)
-- [Énoncé EN](src/webdocs/static/tasks.md)
+- [Énoncé FR](src/webdocs/static/enonce_fr.md)
+- [Énoncé EN](src/webdocs/static/enonce_eb.md)
