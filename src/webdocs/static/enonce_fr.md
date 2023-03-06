@@ -1,4 +1,4 @@
-# CS Games 2020 Compétition Web 
+# CS Games 2023 - Compétition Web 
 
 ## Mise en contexte
 
