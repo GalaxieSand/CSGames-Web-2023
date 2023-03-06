@@ -1,6 +1,6 @@
 # Web
 
-Directeur de compétition: `Jean-Philippe Larouche`
+Directeur de compétition: `Keven Imbeault`
 
 Fondé sur la compétition crée par : `Jordan Guérin`
 
