@@ -121,12 +121,12 @@ You must implement the front-end, as well as the back-end service. You may combi
       - Support branch or tag selection (branch parameter on two previous end points) [20 pts]
       
  * Commits history of a project [Repository Service]
-    - Create page or a section to show the 25 latest commits of the project, on master (GET /repositories/<repository_id>/commits) [20 pts]
+    - Create page or a section to show the 25 latest commits of the project, on master (GET /repositories/<repository_id>/commits) [10 pts]
     - Support paging to go beyond 25 latest commits [20 pts]
     - Allow the user to browse the latest commits on other branch or tag [20 pts]
 
  * Authors list [Repository Service]
-    - Show authors list  (GET /authors) [20 pts]
+    - Show authors list  (GET /authors) [10 pts]
     - Support paging [20 pts]
     - When we click on an author, show a list of all his repositories (GET /authors/<author_id>/repositories) [20 pts]
     - When we click on a repository, go to the repository page [10 pt]
