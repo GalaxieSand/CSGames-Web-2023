@@ -136,9 +136,9 @@ You must implement the front-end, as well as the back-end service. You may combi
     - Show a error message if it didn't work [10 pt]
  
  * Browse through snippets [Snippets Service]
-    - Show latest snippets. (GET /snippets) [30 pts]
+    - Show latest snippets. (GET /snippets) [20 pts]
     - Show the content of the snippet when we click on it [20 pts]
-        - Apply syntax coloring on the snippet [60 pts]
+        - Apply syntax coloring on the snippet [70 pts]
     - Support paging through (GET /snippets?limit=x&skip=y) [20 pts]
     - Filter by keywords (GET /snippets?keywords=x;y;..n) [20 pts]
         - Suggest keywords when typing [50 pts]
