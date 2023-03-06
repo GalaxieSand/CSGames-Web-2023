@@ -120,12 +120,12 @@ Vous devez implémenté un front-end ainsi qu'un service back-end. Vous pouvez c
       - Supporter la sélection de la branche ou du tag sur fichier (paramètre branch sur les deux appels précédents) [20 pts]
 
  * Historique des commits d'un projet [Repository Service]
-    - Créer une page ou une section pour consulter les 25 derniers commits d'un projet, sur master (GET /repositories/<repository_id>/commits) [20 pts]
+    - Créer une page ou une section pour consulter les 25 derniers commits d'un projet, sur master (GET /repositories/<repository_id>/commits) [10 pts]
     - Supporter la pagination pour aller au-delà des 25 derniers commits. [20 pts]
     - Permettre à l'utilisateur de consulter l'historique d'une branche spécifique. [20 pts]
 
  * Liste des auteurs [Repository Service]
-    - Afficher la liste des auteurs (GET /authors) [20 pts]
+    - Afficher la liste des auteurs (GET /authors) [10 pts]
     - Supporter la pagination pour parcourir les auteurs [20 pts]
     - Quand on clique sur un auteur, afficher une section avec la liste de ses dépôts (GET /authors/<author_id>/repositories) [20 pts]
     - Quand on clique sur un dépôt, rediriger vers la page du projet [10 pt]
