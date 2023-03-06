@@ -168,10 +168,10 @@ You must implement the front-end, as well as the back-end service. You may combi
     - Respect the expected return model. [20 pts]
     - Handle the title parameter to filter the snippet if the title matches the provided title parameter. [20 pts]
     - Handle keywords parameter, to filter out by associated keywords. [20 pts]
-    - Handle more than one keyword separated by ';'. [20 pts]
+      - Handle more than one keyword separated by ';'. [30 pts]
     - Implement skip and limit parameter to support paging. [20 pts]
     - Implement the mine parameter, when this parameter is true, only returns the snippets from the current user, by using the **subject** of the JWT. [20 pts]
-    - Order snippets by descending order on `created` field. [10 pt]
+    - Order snippets by descending order on `created` field. [20 pt]
     
   * Get a snippet by identifier, GET /snippets/<snippet_id>
     - Returns a 401 error if no JWT is provided. [10 pt]
