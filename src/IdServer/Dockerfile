@@ -15,4 +15,4 @@ RUN rm /etc/nginx/sites-enabled/default
 ENV PYTHONPATH /idserver/pylib
 
 RUN chmod a+x start.sh
-CMD ["./start.sh"]
+CMD ["/bin/bash", "./start.sh"]
