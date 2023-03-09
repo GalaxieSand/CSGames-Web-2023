@@ -1,0 +1,26 @@
+marc-antoine.jean@csgames.org
+csgamesSaguenay2023!
+
+153088622187
+
+AKIASHJGK7ZV5T6XJHN6
+
+3YX6P24RaQGyAcP276s5ia4v6JLQRR/2Ug7uLkBc
+
+Set-AWSCredential -AccessKey AKIASHJGK7ZV5T6XJHN6 -SecretKey 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 -StoreAs csgames
+
+(Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/idserver
+
+(Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/repositoryservice
+
+(Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/snippetsservice
+
+153088622187.dkr.ecr.ca-central-1.amazonaws.com/webdocs
+
+docker build .
+
+docker images
+
+docker tag <image id> <uri>:<version>
+
+docker push <uri>:<version>
