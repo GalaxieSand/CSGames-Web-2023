@@ -13,6 +13,8 @@ Set-AWSCredential -AccessKey AKIASHJGK7ZV5T6XJHN6 -SecretKey 3YX6P24RaQGyAcP276s
 
 aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/idserver (linux)
 
+docker login -u AWS -p $(aws ecr get-login-password --region ca-central-1) 153088622187.dkr.ecr.ca-central-1.amazonaws.com/idserver
+
 (Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/repositoryservice
 
 (Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 153088622187.dkr.ecr.ca-central-1.amazonaws.com/snippetsservice
