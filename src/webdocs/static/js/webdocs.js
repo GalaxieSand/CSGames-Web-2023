@@ -16,13 +16,13 @@
               result = result.replace(/</g, "&lt;");
               result = result.replace(/>/g, "&gt;");
               markdownContent[lang] = result;
-              document.getElementById('content').innerHTML = marked(result);
+              document.getElementById('content').innerHTML = marked.parse(result);
               }
             });
       }
       else
       {
-        document.getElementById('content').innerHTML = marked(markdownContent[lang]);
+        document.getElementById('content').innerHTML = marked.parse(markdownContent[lang]);
       }
     }
 
