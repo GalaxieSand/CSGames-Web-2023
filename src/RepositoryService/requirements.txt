@@ -6,4 +6,4 @@ pyjwt
 gunicorn
 flasgger
 redis
-mysql-connector-python
+mysql-connector-python=8.0.19
