@@ -5,4 +5,4 @@ pycryptodome
 gunicorn
 flasgger
 flask-cors
-mysql-connector-python
+mysql-connector-python=8.0.19
