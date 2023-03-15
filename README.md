@@ -1,6 +1,6 @@
 # CSGames-Web-2023
 
-Directeur de compétition: `Keven Imbeault`
+Présenté par: `Keven Imbeault`
 
 Crée par : `Jordan Guérin`
 
