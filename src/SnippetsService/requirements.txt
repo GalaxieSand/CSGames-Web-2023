@@ -5,4 +5,4 @@ pycryptodome
 pyjwt
 gunicorn
 flasgger
-mysql-connector-python=8.0.19
+mysql-connector-python==8.0.19
