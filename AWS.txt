@@ -19,6 +19,8 @@ docker login -u AWS -p $(aws ecr get-login-password --region ca-central-1) 15308
 
 153088622187.dkr.ecr.ca-central-1.amazonaws.com/webdocs
 
+153088622187.dkr.ecr.ca-central-1.amazonaws.com/repoanon
+
 docker build .
 
 docker images
