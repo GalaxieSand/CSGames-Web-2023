@@ -2,7 +2,7 @@
 
 Présenté par: `Keven Imbeault`
 
-Crée par : `Jordan Guérin`
+Créé par : `Jordan Guérin`
 
 Modifié par : `Jean-Philippe Larouche`
 
