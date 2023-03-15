@@ -1,6 +1,6 @@
 # CSGames-Web-2023
 
-Présenté par: `Keven Imbeault`
+Présenté par : `Keven Imbeault`
 
 Créé par : `Jordan Guérin`
 
