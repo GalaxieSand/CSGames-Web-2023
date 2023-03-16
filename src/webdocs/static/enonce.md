@@ -30,7 +30,14 @@ Afin d'assurer que les dépôts ne soient pas visibles publiquement, on doit obl
 
 #### Id Server
 
-Ce service s'occupe de la gestion des identités des utilisateurs. Il rend publique sa clé afin que vous puissiez valider la signature digitale du jeton afin de vérifier qu'il est bien l'émetteur de ce jeton.
+Ce service s'occupe de la gestion des identités des utilisateurs. Il rend publique sa clé afin que vous puissiez valider la signature digitale du jeton afin de vérifier qu'il est bien l'émetteur de ce jeton. 
+
+Pour vous générer un jeton de service vous pouvez utiliser le client `tenant1`
+client_id: `tenant1`
+client_secret: `dev`
+
+Ensuite, utilisez le grant_type `client_credentials`, avec ce jeton vous pouvez créer des nouveaux utilisateurs.
+Vouz pouvez vous authentifiez en utilisant ces utilisateurs en utilisant le grant_type `password` et en ajoutant le `username` et le `password`, vous devez aussi passer le client_id et client_secret mentionnez précédemment.
 
 ${IDSERVER_ENDPOINT}
 * Appels importants :
@@ -77,6 +84,8 @@ Vous devez implémenter les appels à partir du swagger.
 * Fichier YAML : [Snippet Service Swagger YAML](/snippets_service.yaml)
 
 * Interface graphique présentant le YAML : [Snippet Service Swagger](/snippetsspec.html)
+
+* Si vous voulez seulement implémenter un front-end pour le Snippets Service, il y a un back-end déjà disponible (https://snippets.lostgit.xyz)
 
 ### Contrainte(s)
 

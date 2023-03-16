@@ -14,6 +14,7 @@ class Repository:
         self.repository_url = repository_url
         self.id = id
         self.status = status
+        self.name = name
 
 
 class AuthorMigrated:

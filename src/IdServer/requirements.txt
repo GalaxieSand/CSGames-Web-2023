@@ -1,7 +1,7 @@
 flask
-pyjwt
+pyjwt==1.7.1
 pycrypto
-pycryptodome
+pycryptodome==3.9.4
 gunicorn
 flasgger
 flask-cors

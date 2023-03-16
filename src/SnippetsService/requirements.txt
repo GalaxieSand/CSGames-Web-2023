@@ -1,8 +1,8 @@
 flask
 flask-cors
 pycrypto
-pycryptodome
-pyjwt
+pycryptodome==3.9.4
+pyjwt==1.7.1
 gunicorn
 flasgger
 mysql-connector-python==8.0.19
