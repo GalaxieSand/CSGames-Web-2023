@@ -111,11 +111,11 @@ def create_user():
                 return openidService.userService.create_user_without_client(username, password)
 
         if "is_service" not in g.jwt:
-            return 403, "Forbidden"
+            return "Forbidden", 403
 
         return openidService.userService.create_user(client, username, password)
     else:
-        return 400, "Bad Request"
+        return "Bad Request", 400
 
 @rest.api_method("/connect/token",
     methods=["POST"],
