@@ -1,0 +1,20 @@
+{
+    "database": {
+        "driver": "mysql",
+        "user": "web_compe",
+        "password": "user",
+        "host": "mysql",
+        "port": 3306,
+        "dbname": "web_compe"
+    },
+    "authentication": {
+        "issuer": "https://TBD",
+        "client_id": "gitimport",
+        "client_secret": "dev"
+    },
+    "cache_ttl": 300,
+    "github_token": "*****",
+    "default_password": "dev"
+}
+  
+  

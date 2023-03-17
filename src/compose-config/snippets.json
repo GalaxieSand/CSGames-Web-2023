@@ -1,0 +1,12 @@
+{
+  "database": {
+    "driver": "mysql",
+    "user": "web_compe",
+    "password": "user",
+    "host": "mysql",
+    "port": 3306,
+    "database": "web_compe"
+  },
+  "issuer": "https://TBD",
+  "site_url": "https://TBD"
+}

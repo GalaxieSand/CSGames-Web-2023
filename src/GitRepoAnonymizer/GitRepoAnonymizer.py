@@ -1,9 +1,10 @@
+import mysql.connector
 import subprocess
 import hashlib
 import random
 import os
 import json
-import mysql.connector
+
 from OpenIdClient import OpenIdClient
 from urllib import request, parse
 

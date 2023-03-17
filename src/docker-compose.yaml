@@ -1,0 +1,88 @@
+version: "3.9"
+name: web_compe_2023
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=strongpass
+      - MYSQL_DATABASE=web_compe
+      - MYSQL_USER=web_compe
+      - MYSQL_PASSWORD=user
+    ports:
+      - 3306:3306
+    volumes: 
+      - data-volume:/var/lib/mysql
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+
+  docs:
+    image: webdocs
+    ports:
+      - 8083:80
+    volumes:
+      - ./compose-config/webdocs.json:/webdocs/setting.json
+    restart: always
+
+  idserver:
+    image: idserver:latest
+    volumes:
+      - ./compose-config/idserver.json:/idserver/setting.json
+      - ./compose-config/cert.key:/idserver/cert.key
+      - ./compose-config/cert.pem:/idserver/cert.pem
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    restart: always
+
+  repositoryservice:
+    image: repositoryservice:latest
+    volumes:
+      - ./compose-config/repositoryservice.json:/repositoryservice/setting.json
+      - repositories:/git
+    ports: 
+      - 8081:80
+    depends_on:
+      - mysql
+      - redis
+      - idserver
+    links:
+      - mysql
+      - redis
+    restart: always
+    
+  snippets:
+    image: snippetsservice:latest
+    volumes:
+      - ./compose-config/snippets.json:/snippetsservice/setting.json
+    ports:
+      - 8082:80
+    depends_on:
+      - mysql
+      - idserver
+    links:
+      - mysql
+    restart: always
+    
+  repoanonymizer:
+    image: repoanonymizer:latest
+    volumes:
+      -  repositories:/gitminer/work_dir
+      -  ./compose-config/repoanonymizer.json:/gitminer/setting.json
+    depends_on:
+      - mysql
+      - idserver
+    links:
+      - mysql
+    restart: always
+
+volumes:
+  repositories:
+    driver: local
+  data-volume:
+    driver: local

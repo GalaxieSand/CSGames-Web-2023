@@ -199,7 +199,7 @@ You must implement the front-end, as well as the back-end service. You may combi
     - Returns a list of keywords available. [10 pts]
 
 #### Artefact
-* Provide a run<i></i>.sh or a Dockerfile [20 pts]
+* Provide a run.sh or a Dockerfile [20 pts]
 * Provide a readme with the required information and dependencies to run the solution. [20 pts]
   
 ### Useful links
@@ -208,3 +208,30 @@ You must implement the front-end, as well as the back-end service. You may combi
 * [JWT Decoding](https://jwt.ms)
 
 * [JSON Web Token RFC](https://tools.ietf.org/html/rfc7519)
+
+### Additional Information
+
+All users in the database have the same password, which is `dev`.
+You can use them as you want. 
+This is a list of 20 usernames:
+
+* 523bc3c983a1
+* bd945d6e6172
+* a8889b6ce991
+* 09478444cbb7
+* 9bbb1e6fc968
+* 99e1f1df4ef1
+* 77c0f314bab2
+* d0fbfabb6efc
+* 8ea7da4d5da2
+* d20751bd8342
+* c0ca6e304130
+* 8e7ac2770913
+* fe282db321a3
+* 44d4c43b7217
+* 4a5a00583c60
+* e5fa73925d7e
+* 6c7d6c6e6e4e
+* 01dd833e8215
+* 40931fd9aa3b
+* 058e643cf2f7

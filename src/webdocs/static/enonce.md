@@ -197,7 +197,7 @@ Vous devez implémenté un front-end ainsi qu'un service back-end. Vous pouvez c
     - Retourner la liste des keywords disponible. [10 pts]
 
 #### Artéfact
-  * Fournir un run<i></i>.sh ou Dockerfile [20 pts]
+  * Fournir un run.sh ou Dockerfile [20 pts]
   * Fournir un readme avec les informations nécessaires pour rouler la solution. [20 pts]
 
 ### Lien(s) utile(s)
@@ -206,3 +206,30 @@ Vous devez implémenté un front-end ainsi qu'un service back-end. Vous pouvez c
 * [JWT Decoding](https://jwt.ms)
 
 * [Json Web Token RFC](https://tools.ietf.org/html/rfc7519)
+
+### Information additionnelles
+
+Tous les utilisateurs dans la base de donnée ont le même mot de passe, qui est `dev`.
+Vous pouvez les utiliser comme vous voulez.
+Voici une liste de 20 nom d'utilisateur:
+
+* 523bc3c983a1
+* bd945d6e6172
+* a8889b6ce991
+* 09478444cbb7
+* 9bbb1e6fc968
+* 99e1f1df4ef1
+* 77c0f314bab2
+* d0fbfabb6efc
+* 8ea7da4d5da2
+* d20751bd8342
+* c0ca6e304130
+* 8e7ac2770913
+* fe282db321a3
+* 44d4c43b7217
+* 4a5a00583c60
+* e5fa73925d7e
+* 6c7d6c6e6e4e
+* 01dd833e8215
+* 40931fd9aa3b
+* 058e643cf2f7
